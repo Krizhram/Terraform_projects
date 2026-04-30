@@ -84,7 +84,7 @@ resource "aws_instance" "main" {
 
 output "aws_details" {
   value = {
-    subnet_ids    = aws_subnet.main[*].id
+    subnet_ids   = aws_subnet.main[*].id
     instance_ips = [for instance in aws_instance.main : instance.public_ip]
   }
 }
