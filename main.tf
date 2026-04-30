@@ -12,6 +12,15 @@ provider "aws" {
   region = "ap-south-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket         = "my-terraform-state-bucket-123"
+    key            = "terraform-project/terraform.tfstate"
+    region         = "ap-south-1"
+  }
+}
+
+
 
 locals {
   project_name       = "my_project"
