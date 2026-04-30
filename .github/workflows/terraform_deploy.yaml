@@ -1,5 +1,6 @@
 name: Terraform Deployment
-on: push
+on:
+  workflow_dispatch:   # manual trigger from GitHub UI
 jobs:
   deploy:
     env:
